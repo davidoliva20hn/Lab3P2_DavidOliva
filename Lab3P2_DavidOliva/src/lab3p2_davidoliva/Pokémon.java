@@ -44,7 +44,7 @@ public class Pokémon {
     }
 
     public boolean setNaturaleza(String naturaleza) {
-        if (naturaleza.equalsIgnoreCase("Tímido")
+        if (naturaleza.equalsIgnoreCase("Timido")
                 || naturaleza.equalsIgnoreCase("Energetico")
                 || naturaleza.equalsIgnoreCase("Misterioso")) {
             this.naturaleza = naturaleza;

@@ -43,9 +43,12 @@ public class Pokeball {
         return numeficiencia;
     }
 
-    public void setNumeficienciaball(int numeficiencia) {
+    public boolean setNumeficienciaball(int numeficiencia) {
         if (numeficiencia >= 1 && numeficiencia <= 3) {
             this.numeficiencia = numeficiencia;
+            return true;
+        } else {
+            return false;
         }
     }
 
