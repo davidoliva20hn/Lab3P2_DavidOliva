@@ -7,10 +7,11 @@ package lab3p2_davidoliva;
  * @author DAVIDANDRESOLIVAHERN
  */
 public class Pokémon {
-    String nombrePok;
-    int numentradapokédex;
-    String naturaleza;
-    boolean atrapado;
+
+    private String nombrePok;
+    private int numentradapokédex;
+    private String naturaleza;
+    private boolean atrapado;
 
     public Pokémon() {
     }
@@ -42,8 +43,15 @@ public class Pokémon {
         return naturaleza;
     }
 
-    public void setNaturaleza(String naturaleza) {
-        this.naturaleza = naturaleza;
+    public boolean setNaturaleza(String naturaleza) {
+        if (naturaleza.equalsIgnoreCase("Tímido")
+                || naturaleza.equalsIgnoreCase("Energetico")
+                || naturaleza.equalsIgnoreCase("Misterioso")) {
+            this.naturaleza = naturaleza;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean isAtrapado() {
@@ -53,5 +61,5 @@ public class Pokémon {
     public void setAtrapado(boolean atrapado) {
         this.atrapado = atrapado;
     }
-    
+
 }

@@ -15,14 +15,11 @@ public class Pokeball {
     public Pokeball() {
     }
 
-    public boolean Pokeball(String color, int numserie, int numeficiencia) {
+    public Pokeball(String color, int numserie, int numeficiencia) {
         this.color = color;
         this.numserie = numserie;
         if (numeficiencia >= 1 && numeficiencia <= 3) {
             this.numeficiencia = numeficiencia;
-            return true;
-        } else {
-            return false;
         }
     }
 
@@ -46,12 +43,9 @@ public class Pokeball {
         return numeficiencia;
     }
 
-    public boolean setNumeficienciaball(int numeficiencia) {
+    public void setNumeficienciaball(int numeficiencia) {
         if (numeficiencia >= 1 && numeficiencia <= 3) {
             this.numeficiencia = numeficiencia;
-            return true;
-        } else {
-            return false;
         }
     }
 
