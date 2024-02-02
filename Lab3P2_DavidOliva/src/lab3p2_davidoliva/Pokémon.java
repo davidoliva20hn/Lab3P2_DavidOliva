@@ -62,4 +62,9 @@ public class Pokémon {
         this.atrapado = atrapado;
     }
 
+    @Override
+    public String toString() {
+        return "Pok\u00e9mon{" + "nombrePok=" + nombrePok + ", numentradapok\u00e9dex=" + numentradapokédex + ", naturaleza=" + naturaleza + ", atrapado=" + atrapado + '}';
+    }
+
 }
