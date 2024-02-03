@@ -44,7 +44,7 @@ public class WaterType extends Pokémon {
 
     @Override
     public String toString() {
-        return super.toString()+"WaterType{" + "vivirfueraagua=" + vivirfueraagua + ", rapideznadar=" + rapideznadar + '}';
+        return super.toString()+"WaterType{" + "vivir fuera del agua:" + vivirfueraagua + ", rapidez al nadar:" + rapideznadar + '}';
     }
 
 }

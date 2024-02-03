@@ -184,7 +184,9 @@ public class Lab3P2_DavidOliva {
                     pokomon.remove(poseliminar);
                 }
                 case 5->{
-                    
+                    for (int i = 0; i < pokeball.size(); i++) {
+                        System.out.println(pokeball.get(i));
+                    }
                 }
             }//fin switch
         } while (opc != 6);//fin do
