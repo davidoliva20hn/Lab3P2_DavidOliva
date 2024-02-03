@@ -190,17 +190,43 @@ public class Lab3P2_DavidOliva {
                     }
                     System.out.println("");
                     System.out.println("Ingrese la posicion de la pokeball que deesa usar:");
-                    int pospokeball=lea.nextInt();
+                    int pospokeball = lea.nextInt();
                     pokeball.get(opc);
+                    int pos = 0;
                     for (int i = 0; i < pokomon.size(); i++) {
-                        if(pokomon.get(i).isAtrapado()==false){
-                            System.out.println("EL POKEMON "+pokomon.get(i).getNombrePok()+ " HA APARECIDO");
+                        if (pokomon.get(i).isAtrapado() == false) {
+                            pos = i;
+                            System.out.println("EL POKEMON " + pokomon.get(i).getNombrePok() + " HA APARECIDO");
                             break;
                         }
                     }
-                     Random random = new Random();
-                     int valorrandom= random.nextInt(1, 3);
-                     
+                    Random random = new Random();
+                    int valorrandom = random.nextInt(1, 3);
+                    int opc1 = 0;
+                    do {
+                        System.out.println("1. capturar        ||  2. huir");
+                        opc1 = lea.nextInt();
+                        switch (opc1) {
+                            case 1 -> {
+                                int eficiencia = pokeball.get(pospokeball).getNumeficienciaball();
+                                if (eficiencia == 0) {
+                                    System.out.println("no pudistes atrapar el pokemon");
+                                    pokeball.remove(pospokeball);
+                                } else if (eficiencia == valorrandom) {
+                                    System.out.println("El pokemon fue atrapado");
+                                    pokomon.get(pos).setAtrapado(true);
+                                    pokeball.remove(pospokeball);
+                                } else {
+                                    pokeball.get(pospokeball).setNumeficienciaball(eficiencia - 1);
+                                    int n = pokeball.get(pospokeball).getNumeficienciaball();
+                                    System.out.println("te quedan " + n + " intentos para atrapar el pokemon");
+                                }
+                            }
+                            case 2 -> {
+                                break;
+                            }
+                        }
+                    } while (opc1 != 2);
 
                 }
             }//fin switch
