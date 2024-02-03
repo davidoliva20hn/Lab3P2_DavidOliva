@@ -183,10 +183,21 @@ public class Lab3P2_DavidOliva {
                     int poseliminar = lea.nextInt();
                     pokomon.remove(poseliminar);
                 }
-                case 5->{
+                case 5 -> {
                     for (int i = 0; i < pokeball.size(); i++) {
-                        System.out.println(pokeball.get(i));
+                        System.out.println(pokeball.indexOf(pokeball.get(i)) + ". " + pokeball.get(i));
                     }
+                    System.out.println("");
+                    System.out.println("Ingrese la posicion de la pokeball que deesa usar:");
+                    int pospokeball=lea.nextInt();
+                    pokeball.get(opc);
+                    for (int i = 0; i < pokomon.size(); i++) {
+                        if(pokomon.get(i).isAtrapado()==false){
+                            System.out.println("EL POKEMON "+pokomon.get(i).getNombrePok()+ " HA APARECIDO");
+                            break;
+                        }
+                    }
+                    
                 }
             }//fin switch
         } while (opc != 6);//fin do
