@@ -3,6 +3,7 @@
 package lab3p2_davidoliva;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -197,7 +198,10 @@ public class Lab3P2_DavidOliva {
                             break;
                         }
                     }
-                    
+                     Random random = new Random();
+                     int valorrandom= random.nextInt(1, 3);
+                     
+
                 }
             }//fin switch
         } while (opc != 6);//fin do
